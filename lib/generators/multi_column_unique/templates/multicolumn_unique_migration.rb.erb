@@ -1,0 +1,11 @@
+class <%= migration_class_name %> < ActiveRecord::Migration
+  def self.up
+    change_table :<%= table_name %> do |t|
+      t.unique_token
+    end
+  end
+
+  def self.down
+    remove_unique_token :<%= table_name %>
+  end
+end
